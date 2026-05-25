@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenAI Assistant — RAG Powered</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-wrapper">
+
+        <!-- Header -->
+        <div class="chat-header">
+            <div class="header-left">
+                <div class="header-avatar">🤖</div>
+                <div class="header-info">
+                    <h2>GenAI Assistant</h2>
+                    <p>
+                        <span class="status-dot"></span>
+                        RAG Powered · Gemini 2.5 Flash
+                    </p>
+                </div>
+            </div>
+            <div class="header-right">
+                <span class="header-badge">⚡ RAG Active</span>
+                <button class="new-chat-btn" onclick="newChat()">
+                    ✦ New Chat
+                </button>
+            </div>
+        </div>
+
+        <!-- Messages -->
+        <div class="chat-messages" id="chatMessages">
+            <div class="message-wrapper bot-wrapper">
+                <div class="message-row">
+                    <div class="bot-avatar-small">🤖</div>
+                    <div class="message bot-message">
+                        👋 Hello! I'm your AI assistant powered by <strong>RAG technology</strong>.<br><br>
+                        I retrieve relevant information from our knowledge base before answering — ensuring accurate, grounded responses.<br><br>
+                        How can I help you today?
+                    </div>
+                </div>
+                <div class="message-meta" style="margin-left: 38px;">
+                    <span class="timestamp" id="initTime"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Typing indicator -->
+        <div class="typing-wrapper" id="typingWrapper">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <div class="bot-avatar-small">🤖</div>
+                <div class="typing-indicator">
+                    <div class="dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <span class="typing-text">Retrieving & generating...</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Input -->
+        <div class="chat-input-wrapper">
+            <div class="input-row">
+                <input
+                    type="text"
+                    id="userInput"
+                    placeholder="Ask anything from the knowledge base..."
+                    onkeypress="handleKeyPress(event)"
+                    autocomplete="off"
+                />
+                <button class="send-btn" onclick="sendMessage()">➤</button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="chat-footer">
+            Powered by Gemini AI · RAG Architecture · Sentence Transformers
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
