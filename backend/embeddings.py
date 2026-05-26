@@ -1,10 +1,18 @@
-from sentence_transformers import SentenceTransformer
+import google.generativeai as genai
+import os
+from dotenv import load_dotenv
 
-# Load the embedding model
-# all-MiniLM-L6-v2 is a free, lightweight model that works offline
-model = SentenceTransformer('all-MiniLM-L6-v2')
+load_dotenv()
+genai.configure(api_key=os.getenv('GEMINI_API_KEY'))
 
 def get_embedding(text):
-    # Convert text meaning into numbers (vector)
-    embedding = model.encode(text)
-    return embedding.tolist()
+    try:
+        result = genai.embed_content(
+            model="models/gemini-embedding-001",
+            content=text,
+            task_type="retrieval_document"
+        )
+        return result['embedding']
+    except Exception as e:
+        print(f"Embedding error: {e}")
+        return [0.0] * 768

@@ -1,6 +1,5 @@
 flask
-sentence-transformers
-scikit-learn
 google-generativeai
 python-dotenv
 numpy
+scikit-learn
