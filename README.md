@@ -3,7 +3,7 @@
 A production-style AI Chat Assistant built with Retrieval-Augmented Generation (RAG) technology.
 
 ## Live Demo
-🚀 [Live Application](https://your-app-url.com) — Update after deployment
+🚀  [Live Application](https://genai-rag-assistant-9a6q.onrender.com)
 
 ## Screenshots
 ![Chat Interface](screenshots/chat.png)
