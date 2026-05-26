@@ -124,13 +124,14 @@ Answer:
 
 ## Project Structure
 
+\```
 trueailab_assignment/
 │
 ├── backend/
 │   ├── main.py          # Flask API + session management
-│   ├── embeddings.py    # Sentence Transformer embedding generation
+│   ├── embeddings.py    # Gemini Embedding API integration
 │   ├── retrieval.py     # Cosine similarity search
-│   ├── llm.py           # Gemini API integration
+│   ├── llm.py           # Gemini 2.5 Flash LLM integration
 │   └── docs.json        # Knowledge base documents
 │
 ├── frontend/
@@ -138,10 +139,17 @@ trueailab_assignment/
 │   ├── style.css        # Professional dark theme styling
 │   └── script.js        # Frontend interaction logic
 │
+├── screenshots/
+│   └── chat.png         # Application screenshot
+│
 ├── .env                 # API keys (not uploaded)
-├── .env.example         # Template for environment variables
+├── .env.example         # Environment variables template
+├── .gitignore           # Git ignore rules (protects .env)
+├── Procfile             # Render.com process configuration
+├── render.yaml          # Render.com deployment configuration
 ├── requirements.txt     # Python dependencies
 └── README.md            # Project documentation
+\```
 
 ---
 
