@@ -12,22 +12,23 @@ A production-style AI Chat Assistant built with Retrieval-Augmented Generation (
 
 ## Architecture Overview
 
+```
 User Question
-↓
-Generate Query Embedding (Sentence Transformers)
-↓
+      ↓
+Generate Query Embedding (Gemini Embedding API)
+      ↓
 Cosine Similarity Search
-↓
+      ↓
 Retrieve Top-3 Relevant Chunks
-↓
+      ↓
 Apply Similarity Threshold (0.3)
-↓
+      ↓
 Build Prompt (Context + History + Question)
-↓
+      ↓
 Gemini 2.5 Flash LLM
-↓
+      ↓
 Grounded Response to User
-
+```
 ---
 
 ## Tech Stack
