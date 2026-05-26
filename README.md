@@ -124,7 +124,7 @@ Answer:
 
 ## Project Structure
 
-\```
+```
 trueailab_assignment/
 │
 ├── backend/
@@ -144,12 +144,12 @@ trueailab_assignment/
 │
 ├── .env                 # API keys (not uploaded)
 ├── .env.example         # Environment variables template
-├── .gitignore           # Git ignore rules (protects .env)
+├── .gitignore           # Git ignore rules
 ├── Procfile             # Render.com process configuration
 ├── render.yaml          # Render.com deployment configuration
 ├── requirements.txt     # Python dependencies
 └── README.md            # Project documentation
-\```
+```
 
 ---
 
